@@ -1,0 +1,99 @@
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+html
+    font-size: 10px
+body
+    font-family: 'Montserrat', sans-serif
+    font-size: 1.6rem
+    font-weight: 400
+    overflow-x: hidden
+header
+    background: url(/assets/DSC_9606.JPG) center / cover no-repeat
+    height: 100vh
+    width: 100vw
+    position: relative
+.nav
+    background-color: #d9d9d9
+    list-style: none
+    display: flex
+    justify-content: space-around
+    animation-name: startDown
+    animation-duration: .6s
+    animation-fill-mode: backwards
+    animation-timing-function: ease-out
+    animation-delay: .4s 
+    user-select: none
+.nav-item
+    position: relative
+    &:link, &:visited
+        text-decoration: none
+        padding: 2rem 2rem
+        text-transform: uppercase
+        color: #000
+        transition: .5s
+        letter-spacing: .6rem
+    &:hover
+        transform: translateY(4px)
+        &::after
+            opacity: 0
+            transform: scale(1.4)
+    &:active
+        transform: translateY(2px)
+    &::after
+        content: ""
+        width: 100%
+        height: 100%
+        display: inline-block
+        background-color: #d9d9d9
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: 1s
+.title-header
+    position: absolute
+    top: 25%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+    user-select: none
+    &__main
+        display: block
+        font-weight: 700
+        font-size: 4rem
+        letter-spacing: 1rem
+        animation: 1s ease-out .1s leftToAss
+    &__second
+        display: block
+        font-weight: 400
+        animation: 1s ease-out .1s rightToAss
+.about
+    background: url(/assets/DSC_2679.JPG) center / cover no-repeat
+    width: 100vw
+    height: 100vh
+
+@keyframes startDown 
+    0%
+        opacity: 0
+        transform: translateY(-3rem)
+    100%
+        opacity: 1
+        transform: translateY(0)
+@keyframes leftToAss
+    0%
+        opacity: 0
+        transform: translateX(-10rem)
+    100%
+        opacity: 1
+        transform: translateY(0)
+@keyframes rightToAss
+    0%
+        opacity: 0
+        transform: translateX(10rem)
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+
