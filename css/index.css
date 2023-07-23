@@ -6,6 +6,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,7 +20,8 @@ header {
   background: url(/assets/DSC_9606.JPG) center/cover no-repeat;
   height: 100vh;
   width: 100vw;
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .nav {
@@ -95,26 +97,78 @@ header {
 }
 
 .about {
-  background: url(/assets/DSC_0507.jpg) center/cover no-repeat;
-  width: 100vw;
-  height: 100vh;
   position: relative;
 }
-
-.about-info {
+.about__info {
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 3rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  border: 1px solid gray;
+}
+.about__title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+}
+.about__text {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  text-transform: lowercase;
+}
+
+.paralax-info {
+  background-image: url(/assets/DSC_0507.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.specs {
+  position: relative;
+}
+.specs__info {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 4rem;
-  text-transform: lowercase;
+  padding: 3rem;
+  border: 1px solid gray;
 }
-.about-info__text {
+.specs__title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+}
+.specs__text {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.3rem;
+}
+.specs__img {
+  height: 2rem;
+  margin-right: 1rem;
+}
+.specs__block {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.paralax-specs {
+  background-image: url(/assets/DSC_1343_01.JPG);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
 }
 
 @keyframes startDown {
